@@ -1,0 +1,9 @@
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/test2.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/edit_cache.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/rebuild_cache.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/list_install_components.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/install.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/install/local.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/install/strip.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/test2_autogen_timestamp_deps.dir
+D:/QT_code/qt_pro/new_1/build-cmake-debug/CMakeFiles/test2_autogen.dir

@@ -1,0 +1,26 @@
+# ninja log v6
+7	129	7912214311003958	test2_autogen/timestamp	d2518b62f5cd8c08
+633	2571	7912104771568783	CMakeFiles/test2.dir/main.cpp.obj	3e72e47a2ace8677
+129	2618	7912214312235023	CMakeFiles/test2.dir/login_main_form.cpp.obj	ab098951436525be
+7	129	7912214311003958	test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+7	129	7912214311003958	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/timestamp	d2518b62f5cd8c08
+7	129	7912214311003958	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+462	3118	7912213160158142	CMakeFiles/test2.dir/test2_autogen/mocs_compilation.cpp.obj	ff8528b3a5d6576b
+138	3662	7912214312315060	CMakeFiles/test2.dir/admin_form.cpp.obj	5212e98eaf1ec6c2
+133	3355	7912214312275010	CMakeFiles/test2.dir/user_form.cpp.obj	11fe44d2f9cd3ab1
+3663	4388	7912214347571173	test2.exe	e82565f3512a6f12
+9	581	7912218336553441	test2_autogen/timestamp	d2518b62f5cd8c08
+9	581	7912218336553441	test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+9	581	7912218336553441	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/timestamp	d2518b62f5cd8c08
+9	581	7912218336553441	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+597	3212	7912218337293452	CMakeFiles/test2.dir/login_main_form.cpp.obj	ab098951436525be
+582	3606	7912218337143444	CMakeFiles/test2.dir/test2_autogen/mocs_compilation.cpp.obj	ff8528b3a5d6576b
+609	3984	7912218337403442	CMakeFiles/test2.dir/user_form.cpp.obj	11fe44d2f9cd3ab1
+7	139	7912218518696941	test2_autogen/timestamp	d2518b62f5cd8c08
+7	139	7912218518696941	test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+7	139	7912218518696941	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/timestamp	d2518b62f5cd8c08
+7	139	7912218518696941	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+140	2812	7912218520033663	CMakeFiles/test2.dir/login_main_form.cpp.obj	ab098951436525be
+153	3707	7912218520163661	CMakeFiles/test2.dir/user_form.cpp.obj	11fe44d2f9cd3ab1
+166	3849	7912218520293678	CMakeFiles/test2.dir/admin_form.cpp.obj	5212e98eaf1ec6c2
+3849	4574	7912218557124906	test2.exe	e82565f3512a6f12
