@@ -24,3 +24,13 @@
 153	3707	7912218520163661	CMakeFiles/test2.dir/user_form.cpp.obj	11fe44d2f9cd3ab1
 166	3849	7912218520293678	CMakeFiles/test2.dir/admin_form.cpp.obj	5212e98eaf1ec6c2
 3849	4574	7912218557124906	test2.exe	e82565f3512a6f12
+4	764	7912293452859110	test2_autogen/timestamp	d2518b62f5cd8c08
+4	764	7912293452859110	test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+4	764	7912293452859110	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/timestamp	d2518b62f5cd8c08
+4	764	7912293452859110	D:/QT_code/qt_pro/new_1/build-cmake-debug/test2_autogen/mocs_compilation.cpp	d2518b62f5cd8c08
+769	3460	7912293453469103	CMakeFiles/test2.dir/main.cpp.obj	3e72e47a2ace8677
+774	4401	7912293453509109	CMakeFiles/test2.dir/login_main_form.cpp.obj	ab098951436525be
+765	4636	7912293453419063	CMakeFiles/test2.dir/test2_autogen/mocs_compilation.cpp.obj	ff8528b3a5d6576b
+779	5281	7912293453569098	CMakeFiles/test2.dir/user_form.cpp.obj	11fe44d2f9cd3ab1
+786	5640	7912293453639147	CMakeFiles/test2.dir/admin_form.cpp.obj	5212e98eaf1ec6c2
+5640	6423	7912293502168139	test2.exe	e82565f3512a6f12
