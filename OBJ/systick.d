@@ -32,3 +32,4 @@
 ..\obj\systick.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\systick.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\systick.o: ..\HARDWARE\systick.h
+..\obj\systick.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h

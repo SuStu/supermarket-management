@@ -443,6 +443,21 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\mq2.c</FilePath>
             </File>
+            <File>
+              <FileName>GUI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\GUI.c</FilePath>
+            </File>
+            <File>
+              <FileName>Lcd_Driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Lcd_Driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>QDTFT_demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\QDTFT_demo.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -43,3 +43,6 @@
 ..\obj\main.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\main.o: ..\HARDWARE\mq2.h
 ..\obj\main.o: ..\SYSTEM\adc\adcx.h
+..\obj\main.o: ..\HARDWARE\QDTFT_demo.h
+..\obj\main.o: ..\HARDWARE\Lcd_Driver.h
+..\obj\main.o: ..\HARDWARE\GUI.h

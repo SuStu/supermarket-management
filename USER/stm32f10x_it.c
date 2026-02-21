@@ -32,7 +32,20 @@ void NMI_Handler(void)
  
 void HardFault_Handler(void)
 {
+	
   /* Go to infinite loop when Hard Fault exception occurs */
+		    // 在这里添加代码，查看进入硬件错误前的地址
+    volatile uint32_t *pSP = (uint32_t *)__get_MSP();  // 获取堆栈指针
+    
+    // 这些是进入硬件错误前压入堆栈的寄存器
+    volatile uint32_t r0 = pSP[0];  // R0
+    volatile uint32_t r1 = pSP[1];  // R1
+    volatile uint32_t r2 = pSP[2];  // R2
+    volatile uint32_t r3 = pSP[3];  // R3
+    volatile uint32_t r12 = pSP[4]; // R12
+    volatile uint32_t lr = pSP[5];  // LR - 返回地址
+    volatile uint32_t pc = pSP[6];  // PC - 程序计数器
+    volatile uint32_t psr = pSP[7]; // PSR
   while (1)
   {
   }
@@ -41,6 +54,7 @@ void HardFault_Handler(void)
 void MemManage_Handler(void)
 {
   /* Go to infinite loop when Memory Manage exception occurs */
+
   while (1)
   {
   }

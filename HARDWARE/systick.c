@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stm32f10x.h>
 #include "systick.h"
+#include <stdio.h>
 static volatile uint64_t g_sysRunTime = 0;
 
 static void (*g_pTaskScheduleFunc)(void);          // 函数指针变量，保存任务调度的函数地址
@@ -31,7 +32,7 @@ void SystickInit(void)
 	{
 		while (1);
 	}
-	SysTick->CTRL &= - SysTick_CTRL_ENABLE_Msk;
+	//SysTick->CTRL &= - SysTick_CTRL_ENABLE_Msk;
 }
 
 /**
@@ -44,7 +45,10 @@ void SystickInit(void)
 void SysTick_Handler(void)
 {
 	g_sysRunTime++;
-	g_pTaskScheduleFunc();
+	if(g_pTaskScheduleFunc != NULL)
+	{
+		g_pTaskScheduleFunc();
+	}
 }
 
 /**

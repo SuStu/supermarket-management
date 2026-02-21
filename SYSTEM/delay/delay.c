@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include "stm32f10x.h"
 #include "delay.h"
+static uint32_t g_fac_us = 0;  // us延时倍乘数
+
 /**
 ***********************************************************
 * @brief DWT初始化配置
@@ -13,18 +15,16 @@
 */
 void Delay_Init(void) 
 {
-	/* 关闭 TRC */
-	CoreDebug->DEMCR &= ~CoreDebug_DEMCR_TRCENA_Msk;
-	/* 打开 TRC */
-	CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-
-	/* 关闭计数功能 */
-	DWT->CTRL &= ~DWT_CTRL_CYCCNTENA_Msk;
-	/* 打开计数功能 */
-	DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
-
-	/* 计数清零 */
-	DWT->CYCCNT = 0;
+ // 获取系统时钟频率
+    SystemCoreClockUpdate();
+    
+    // 计算us延时系数 (假设72MHz: 72次循环/微秒)
+    g_fac_us = SystemCoreClock / 1000000;
+    
+    // 配置DWT（只在初始化时配置）
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+    DWT->CYCCNT = 0;
 }
 
 /**
@@ -36,12 +36,15 @@ void Delay_Init(void)
 */
 void delay_us(uint32_t us)
 {
-	uint32_t tickStart = DWT->CYCCNT;
-
-	/* 转换为nUs对应的时钟跳动次数*/
-	us *= (SystemCoreClock / 1000000);
-	/* 延时等待 */
-	while ((DWT->CYCCNT - tickStart) < us);
+    uint32_t tickStart;
+    uint32_t tickDelta;
+    
+    // 修复：移除关中断代码，避免影响SysTick中断
+    tickStart = DWT->CYCCNT;
+    tickDelta = us * g_fac_us;
+    
+    // 等待（DWT计数不受中断影响）
+    while ((DWT->CYCCNT - tickStart) < tickDelta);
 }
 
 /**
@@ -53,10 +56,10 @@ void delay_us(uint32_t us)
 */
 void delay_ms(uint32_t ms)
 {
-	for (uint32_t i = 0; i < ms; i++)
-	{
-		delay_us(1000);
-	}
+    for(uint32_t i = 0; i < ms; i++)
+    {
+        delay_us(1000);
+    }
 }
 
 

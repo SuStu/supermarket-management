@@ -89,7 +89,7 @@ float MQ2_GetData_PPM(void)
 	
 	float Vol = (tempData*5/4096);
 	float RS = (5-Vol)/(Vol*0.5);
-	float R0=6.64;
+	float R0 = 6.64;
 	
 	float ppm = pow(11.5428*R0/RS, 0.6549f);
 	

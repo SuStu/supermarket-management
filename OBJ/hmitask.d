@@ -1,6 +1,7 @@
 ..\obj\hmitask.o: ..\HARDWARE\hmitask.c
+..\obj\hmitask.o: ..\HARDWARE\hmitask.h
+..\obj\hmitask.o: ..\HARDWARE\key.h
 ..\obj\hmitask.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
-..\obj\hmitask.o: ..\HARDWARE\led.h
 ..\obj\hmitask.o: ..\SYSTEM\sys\sys.h
 ..\obj\hmitask.o: ..\USER\stm32f10x.h
 ..\obj\hmitask.o: ..\CORE\core_cm3.h
@@ -33,5 +34,6 @@
 ..\obj\hmitask.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\hmitask.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\hmitask.o: ..\STM32F10x_FWLib\inc\misc.h
-..\obj\hmitask.o: ..\HARDWARE\key.h
+..\obj\hmitask.o: ..\HARDWARE\led.h
 ..\obj\hmitask.o: ..\SYSTEM\delay\delay.h
+..\obj\hmitask.o: ..\HARDWARE\QDTFT_demo.h

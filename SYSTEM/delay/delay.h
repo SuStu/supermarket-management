@@ -40,11 +40,12 @@
 //delay_intnesting¸ÄÎª£ºdelay_osintnesting
 ////////////////////////////////////////////////////////////////////////////////// 
 	 
-void Delay_Init(void);
 void delay_ms(uint32_t ms);
 void delay_us(uint32_t us);
 
-
+void delay_us1(u32 us);
+void Delay_Init(void);
+void delay_ms1(u16 ms);
 #endif
 
 

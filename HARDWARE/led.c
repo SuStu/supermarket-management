@@ -158,7 +158,6 @@ void TurnOffLed(uint8_t ledNo)
     /* 熄灭LED：根据硬件连接，可能是低电平熄灭 */
     GPIO_SetBits(g_gpioList[ledNo].gpio, g_gpioList[ledNo].pin);
 }
-
 /**
 ***********************************************************
 * @brief LED状态取反
