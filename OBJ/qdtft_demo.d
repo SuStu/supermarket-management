@@ -37,3 +37,9 @@
 ..\obj\qdtft_demo.o: ..\SYSTEM\sys\sys.h
 ..\obj\qdtft_demo.o: ..\HARDWARE\Picture.h
 ..\obj\qdtft_demo.o: ..\HARDWARE\QDTFT_demo.h
+..\obj\qdtft_demo.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\qdtft_demo.o: ..\HARDWARE\mq2.h
+..\obj\qdtft_demo.o: ..\SYSTEM\adc\adcx.h
+..\obj\qdtft_demo.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\qdtft_demo.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\qdtft_demo.o: ..\HARDWARE\hmitask.h

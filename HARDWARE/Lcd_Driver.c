@@ -236,7 +236,8 @@ void Lcd_Init()
 	Lcd_WriteData(0x00);
 	Lcd_WriteData(0x00);
 	Lcd_WriteData(0x00);
-	Lcd_WriteData(0x9f);
+//	Lcd_WriteData(0x9f);
+	Lcd_WriteData(0x7f);
 	
 	Lcd_WriteIndex(0xF0); //Enable test command  
 	Lcd_WriteData(0x01); 
@@ -257,22 +258,41 @@ void Lcd_Init()
 入口参数：xy起点和终点
 返回值：无
 *************************************************/
+//void Lcd_SetRegion(u16 x_start,u16 y_start,u16 x_end,u16 y_end)
+//{		
+//	Lcd_WriteIndex(0x2a);
+//	Lcd_WriteData(0x00);
+//	Lcd_WriteData(x_start+2);
+//	Lcd_WriteData(0x00);
+//	Lcd_WriteData(x_end+2);
+
+//	Lcd_WriteIndex(0x2b);
+//	Lcd_WriteData(0x00);
+//	Lcd_WriteData(y_start+1);
+//	Lcd_WriteData(0x00);
+//	Lcd_WriteData(y_end+1);
+//	
+//	Lcd_WriteIndex(0x2c);
+
+//}
 void Lcd_SetRegion(u16 x_start,u16 y_start,u16 x_end,u16 y_end)
-{		
-	Lcd_WriteIndex(0x2a);
-	Lcd_WriteData(0x00);
-	Lcd_WriteData(x_start+2);
-	Lcd_WriteData(0x00);
-	Lcd_WriteData(x_end+2);
+{
+    if(x_end >= 128) x_end = 127;
+    if(y_end >= 128) y_end = 127;
 
-	Lcd_WriteIndex(0x2b);
-	Lcd_WriteData(0x00);
-	Lcd_WriteData(y_start+1);
-	Lcd_WriteData(0x00);
-	Lcd_WriteData(y_end+1);
-	
-	Lcd_WriteIndex(0x2c);
+    Lcd_WriteIndex(0x2a);
+    Lcd_WriteData(0x00);
+    Lcd_WriteData(x_start+2);
+    Lcd_WriteData(0x00);
+    Lcd_WriteData(x_end+2);
 
+    Lcd_WriteIndex(0x2b);
+    Lcd_WriteData(0x00);
+    Lcd_WriteData(y_start+1);
+    Lcd_WriteData(0x00);
+    Lcd_WriteData(y_end+1);
+
+    Lcd_WriteIndex(0x2c);
 }
 
 /*************************************************
@@ -332,3 +352,18 @@ void Lcd_Clear(u16 Color)
 	}   
 }
 
+//void Lcd_Reset_Force(void)
+//{
+//    // 强制复位屏幕
+//    LCD_RST_CLR;
+//    delay_ms(10);
+//    LCD_RST_SET;
+//    delay_ms(50);
+//    
+//    // 重新初始化屏幕
+//    Lcd_Init();
+//    
+//    // 清除所有初始化标志
+//    extern void ResetScreenInitFlag(void);
+//    ResetScreenInitFlag();
+//}

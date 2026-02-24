@@ -20,6 +20,7 @@
 **********************BEGIN***********************/		
 
 #define MQ2_READ_TIMES	10  //MQ-2传感器ADC循环读取次数
+#define MQ2_PREHEAT_TIME 10 // 预热时间（单位：秒，实际需静置10分钟
 
 //模式选择	
 //模拟AO:	1
@@ -32,7 +33,7 @@
 #define		MQ2_AO_GPIO_CLK								RCC_APB2Periph_GPIOA
 #define 	MQ2_AO_GPIO_PORT							GPIOA
 #define 	MQ2_AO_GPIO_PIN								GPIO_Pin_0
-#define   ADC_CHANNEL               		ADC_Channel_0	// ADC 通道宏定义
+#define   	ADC_CHANNEL               		ADC_Channel_0	// ADC 通道宏定义
 
 #else
 #define		MQ2_DO_GPIO_CLK								RCC_APB2Periph_GPIOA

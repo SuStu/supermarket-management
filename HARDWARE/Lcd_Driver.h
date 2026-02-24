@@ -89,7 +89,7 @@ LCD_CS_SET;\
 } 
 
 
-
+//void Lcd_Reset_Force(void);
 void LCD_GPIO_Init(void);
 void Lcd_WriteIndex(u8 Index);
 void Lcd_WriteData(u8 Data);

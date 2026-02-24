@@ -13,6 +13,10 @@
 "..\obj\gui.o"
 "..\obj\lcd_driver.o"
 "..\obj\qdtft_demo.o"
+"..\obj\dht11.o"
+"..\obj\atim.o"
+"..\obj\atk_fan.o"
+"..\obj\buzz.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"
@@ -25,6 +29,7 @@
 "..\obj\misc.o"
 "..\obj\stm32f10x_dma.o"
 "..\obj\stm32f10x_adc.o"
+"..\obj\stm32f10x_tim.o"
 --library_type=microlib --strict --scatter "..\OBJ\KEY.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

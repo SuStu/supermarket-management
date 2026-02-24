@@ -46,3 +46,7 @@
 ..\obj\main.o: ..\HARDWARE\QDTFT_demo.h
 ..\obj\main.o: ..\HARDWARE\Lcd_Driver.h
 ..\obj\main.o: ..\HARDWARE\GUI.h
+..\obj\main.o: ..\HARDWARE\dht11.h
+..\obj\main.o: ..\HARDWARE\atk_fan.h
+..\obj\main.o: ..\HARDWARE\atim.h
+..\obj\main.o: ..\HARDWARE\buzz.h

@@ -11,6 +11,10 @@
 #include "QDTFT_demo.h"
 #include "Lcd_Driver.h"
 #include "GUI.h"
+#include "dht11.h"
+#include "atk_fan.h"
+#include "atim.h"
+#include "buzz.h"
 
 typedef struct
 {
@@ -20,14 +24,14 @@ typedef struct
     void (*pTaskFuncCb)(void);  // 函数指针
 } TaskComps_t;
 
-/* 简化任务表，只保留HMI任务 */
+/* 修正任务表注释（和实际数值匹配） */
 static TaskComps_t g_taskComps[] = 
 {
-    {0, 10,10, HmiTask},  // 10ms执行一次
-//	{0,20,20,MQ2_Task},
-	{0,500,500,QDTFT_Task},
-//	{0,20,20,MFRC522Task},
-//	{0,200,200,Usb2ComTask},
+    {0,50,50,QDTFT_Task},       // 10ms 屏幕任务（高频刷新，更稳定）
+    {0,100,100, HmiTask},         // 50ms 按键任务
+    {0,100,100,DHT11_Task},     // 200ms 温湿度读取
+    {0,500,500,BUZZ_Task},      // 200ms 蜂鸣器任务
+    {0,200,200,Usb2ComTask},    // 200ms 串口任务
 };
 
 #define TASK_NUM_MAX   (sizeof(g_taskComps) / sizeof(g_taskComps[0]))
@@ -65,15 +69,15 @@ static void TaskScheduleCb(void)
 
 static void DrvInit(void)
 {
-	SystickInit();
-	Delay_Init();	    	//延时函数初始化	  
-	LED_Init();		  	 	//初始化与LED连接的硬件接口
-	KEY_Init();          	//初始化与按键连接的硬件接口
-//    Usb2ComDrvInit();       // USB转串口驱动初始化
-//    MFRC522_Init();
-//	MQ2_Init();
-	Lcd_Init();
-	
+    SystickInit();
+    Delay_Init();	    	//延时函数初始化	  
+    LED_Init();		  	 	//初始化与LED连接的硬件接口
+    KEY_Init();          	//初始化与按键连接的硬件接口
+    Usb2ComDrvInit();       // USB转串口驱动初始化
+    Lcd_Init();            // LCD初始化
+    DHT11_Init();          // DHT11初始化
+    atk_fan_init();        // 风扇初始化
+    BUZZ_Init();           // 蜂鸣器初始化
 }
 
 static void AppInit(void)
@@ -83,13 +87,14 @@ static void AppInit(void)
 
 
 
- int main(void)
- {	
+// 在 main 函数开始处添加
+int main(void)
+{
     DrvInit(); 
-	AppInit();
-	while(1)
-	{
-		TaskHandler();
-	}
-	 
+    AppInit();
+    
+    while(1)
+    {
+        TaskHandler();
+    }
 }

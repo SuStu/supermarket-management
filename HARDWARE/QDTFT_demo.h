@@ -10,4 +10,5 @@ void Color_Test(void);
 void showimage(const unsigned char *p); 
 void QDTFT_Task(void);
 void ResetScreenInitFlag(void);
+void Update_Mainmenu_Data(void);
 #endif

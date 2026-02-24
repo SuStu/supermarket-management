@@ -222,6 +222,7 @@ void DisplayButtonUp(u16 x1,u16 y1,u16 x2,u16 y2)
 }
 
 
+
 void Gui_DrawFont_GBK16(u16 x, u16 y, u16 fc, u16 bc, u8 *s)
 {
 	unsigned char i,j;

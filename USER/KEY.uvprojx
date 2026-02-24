@@ -458,6 +458,26 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\QDTFT_demo.c</FilePath>
             </File>
+            <File>
+              <FileName>dht11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\dht11.c</FilePath>
+            </File>
+            <File>
+              <FileName>atim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\atim.c</FilePath>
+            </File>
+            <File>
+              <FileName>atk_fan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\atk_fan.c</FilePath>
+            </File>
+            <File>
+              <FileName>buzz.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\buzz.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -532,6 +552,11 @@
               <FileName>stm32f10x_adc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32F10x_FWLib\src\stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_tim.c</FilePath>
             </File>
           </Files>
         </Group>

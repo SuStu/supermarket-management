@@ -21,13 +21,99 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-C:\Users\30684\Desktop\graduation_project\pro_test1\USER\KEY.uvprojx
-Project File Date:  02/20/2026
+C:\Users\30684\Desktop\graduation_project\pro_test1_实现界面\USER\KEY.uvprojx
+Project File Date:  02/23/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\keil\ARM\ARMCC\Bin'
-Build target 'KEY'
-"..\OBJ\KEY.axf" - 0 Error(s), 0 Warning(s).
+Rebuild target 'KEY'
+compiling queue.c...
+compiling main.c...
+..\HARDWARE\hmitask.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\atk_fan.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\buzz.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif 
+main.c(100): warning:  #1-D: last line of file ends without a newline
+  }
+main.c: 4 warnings, 0 errors
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling key.c...
+compiling systick.c...
+compiling hmitask.c...
+..\HARDWARE\hmitask.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\hmitask.c(43): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\hmitask.c: 2 warnings, 0 errors
+compiling led.c...
+compiling usb2Com_drv.c...
+..\HARDWARE\usb2Com_drv.c(260): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\usb2Com_drv.c: 1 warning, 0 errors
+compiling mq2.c...
+..\HARDWARE\mq2.c(128): warning:  #111-D: statement is unreachable
+      return 0;
+..\HARDWARE\mq2.c(142): warning:  #223-D: function "memset" declared implicitly
+      memset(buff, 0, sizeof(buff));
+..\HARDWARE\mq2.c(157): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\mq2.c: 3 warnings, 0 errors
+compiling MFRC522.c...
+..\HARDWARE\MFRC522.c(376): warning:  #550-D: variable "status"  was set but never used
+      char status;
+..\HARDWARE\MFRC522.c(629): warning:  #223-D: function "printf" declared implicitly
+      printf("卡的类型:");
+..\HARDWARE\MFRC522.c: 2 warnings, 0 errors
+compiling GUI.c...
+compiling Lcd_Driver.c...
+..\HARDWARE\Lcd_Driver.c(369): warning:  #1-D: last line of file ends without a newline
+  //}
+..\HARDWARE\Lcd_Driver.c: 1 warning, 0 errors
+compiling dht11.c...
+compiling QDTFT_demo.c...
+..\HARDWARE\hmitask.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\QDTFT_demo.c(241): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\QDTFT_demo.c: 2 warnings, 0 errors
+compiling atim.c...
+..\HARDWARE\atim.c(60): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\atim.c: 1 warning, 0 errors
+compiling atk_fan.c...
+..\HARDWARE\atk_fan.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\atk_fan.c(18): warning:  #223-D: function "atim_timx_cplm_pwm_init" declared implicitly
+      atim_timx_cplm_pwm_init(PWM_ARR, PWM_PSC); 
+..\HARDWARE\atk_fan.c(81): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\atk_fan.c: 3 warnings, 0 errors
+compiling usart.c...
+compiling delay.c...
+compiling buzz.c...
+..\HARDWARE\buzz.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\HARDWARE\buzz.c(43): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\buzz.c: 2 warnings, 0 errors
+compiling sys.c...
+assembling startup_stm32f10x_hd.s...
+compiling core_cm3.c...
+compiling adcx.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling misc.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=17118 RO-data=7938 RW-data=188 ZI-data=1204  
+FromELF: creating hex file...
+"..\OBJ\KEY.axf" - 0 Error(s), 21 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -40,7 +126,7 @@ Package Vendor: Keil
   D:\keil\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
